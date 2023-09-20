@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+    <title>Metta</title>
+    <style>
+    @media screen and (max-width: 740px){
+        iframe {
+
+                width: 85% !important;
+    margin: auto;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <header  class="bg-color">
+        <nav>
+            <a href="{% url 'index'%}">
+                <div class="logo">
+                    <img src="{{general.logo_white.url}}" alt="">
+                   </div>
+            </a>
+            
+
+            <div class="burger-menu menu-bar">
+                <div class="menu-main">MENU</div>
+                <div class="lines">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line1"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="burger-menu-content menu">
+
+      
+        <div class="x-btn close">
+            <div class="x-btn-style">BAGLA</div>
+            <div class="lines-close">
+                <div class="line-x line4"></div>
+                <div class="line-x line5"></div>
+                <div class="line-x line4"></div>
+            </div>
+        </div>
+
+        <div class="navbar-menu-content">
+
+            <ul>
+                <a href="{% url 'about' %}"><li>HAQQIMIZDA</li></a> 
+                <a href="{% url 'services' %}"><li>XİDMƏTLƏR</li></a>
+                <a href="{% url 'projects' %}"><li>LAYİHƏLƏR</li></a> 
+                <a href="{% url 'clients' %}"><li>MÜŞTƏRİLƏR & TƏRƏFDAŞLAR</li></a>
+                <a href="{% url 'contact'%}"><li>ƏLAQƏ</li></a>
+            </ul>
+
+            <div class="socials">
+               {% for s in social %}
+                <a href="{{s.url}}" target="_blank">
+					{% if s.icon_font_tag == 'facebook'%}
+                    <i class="fab fa-{{s.icon_font_tag}}-f"></i>
+					{% else %}
+					<i class="fab fa-{{s.icon_font_tag}}"></i>
+					{% endif %}
+                </a>
+
+                {% endfor %} 
+            </div>
+        </div>
+
+       
+    </section>
+
+
+    <section class="contact">
+        <div class="contact-content">
+           <div class="container">
+               <h1>{{contact_statik.main_title}}</h1>
+           </div>
+            <div class="container">
+                <div class="contact-details">
+                    <div class="map">{{general.map_embed |safe}}
+    
+                        <div class="address-n-btn">
+                            <div class="address-c">
+                                {{general.address}} <br>Bakı, Azərbaycan<br> {{general.phone}}
+                            </div>
+                            <div class="contact-btn">
+                                <a href="{{general.map_url}}" target="_blank">
+                                    <div class="direction">{{contact_statik.map_button_text}}</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form">
+                        <form method="post">
+							{%csrf_token%}
+                            <label for="">Adınız *
+                                <input type="text" required name="ad" id="" style=" padding: 21px; ">
+                            </label>
+    
+                            <label for="">Email *
+                                <input type="email" required name="email" id="" style=" padding: 21px; ">
+                            </label>
+    
+                            <label for="">Telefon nömrə
+                                <input type="text" required name="elaqe" id="" style=" padding: 21px; ">
+                            </label>
+    
+                            <label class="textare" for="">İsmarıc *
+                                <textarea name="text" required id="" cols="30" rows="10" style=" padding: 21px; "></textarea>
+                            </label>
+    
+                            <button type="submit">
+                                <div class="send">GÖNDƏR</div>
+                            </button>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-width">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-address">
+                        <div class="address">
+                            <p>{{general.address}}</p>
+                            <p>{{general.email}}</p>
+                        </div>
+        
+                        <div class="copyright">
+                            {{general.copyright}}
+                        </div>
+                    </div>
+        
+                    <div class="footer-socials">
+                        <div class="socials">
+                           {%for s in social%}
+                            <a href="{{s.url}}" target="_blank"><img src="{{s.icon.url}}" alt=""></a>
+                            {% endfor %}
+                        </div>
+                        <div class="powered-by">
+                            <a href="{{general.powered_by_url}}" target="_blank">
+                            <img src="{{general.powered_by_logo.url}}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+    <script src="{% static 'js/main.js'%}"></script>
+
+</body>
+</html>

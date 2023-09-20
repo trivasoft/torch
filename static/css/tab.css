@@ -1,0 +1,189 @@
+
+.wrapper {
+    
+    display: flex;
+  width: 1140px;
+  justify-content: space-between;
+  }
+  
+  .wrapper .wrapper_left {
+  padding: 0 18px;
+    display: flex;
+    margin-top: 20px;
+  
+  }
+
+  .wrapper .wrapper_left ul {
+      padding-left: 0;
+  }
+  
+  .wrapper .wrapper_left ul li {
+    border: 2px solid #FFCE12;
+    margin-bottom: 25px;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 190px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .wrapper .wrapper_left ul li p {
+    color: #FFCE12;
+    position: relative;
+  }
+  
+ 
+
+  .wrapper p {
+      margin: 0;
+  }
+  
+  .wrapper .wrapper_left ul li.active {
+   
+    background-color: #FFCE12;
+  }
+  .wrapper .wrapper_left ul li.active p {
+    color: #373F48;
+  }
+  .wrapper .wrapper_left ul li.active:before {
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+  
+  .wrapper .wrapper_left ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+.wrapper_right {
+    width: 888px;
+}
+  
+  .wrapper .wrapper_right .title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    color: #6b6b93;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .wrapper .wrapper_right .item .item_info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .wrapper .wrapper_right .item .item_info .img {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .wrapper .wrapper_right .item .item_info .img:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("https://i.imgur.com/HwNnoFN.png") no-repeat 0 0;
+    width: 94px;
+    height: 101px;
+  }
+  
+  .wrapper .wrapper_right .item.angular .item_info .img:before {
+    background-position: 0 0;
+    width: 94px;
+    height: 101px;
+  }
+  .wrapper .wrapper_right .item.nodejs .item_info .img:before {
+    background-position: 0 -110px;
+    width: 89px;
+    height: 101px;
+  }
+  .wrapper .wrapper_right .item.reactjs .item_info .img:before {
+    background-position: 0 -220px;
+    width: 100px;
+    height: 100px;
+  }
+  .wrapper .wrapper_right .item.vuejs .item_info .img:before {
+    background-position: 0 -330px;
+    width: 100px;
+    height: 101px;
+  }
+  
+  .wrapper .wrapper_right .item .item_info p {
+    background: #fff;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #abaacd;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .wrapper .wrapper_right .item.angular .item_info p {
+    color: #dd0330;
+  }
+  .wrapper .wrapper_right .item.nodejs .item_info p {
+    color: #8bc500;
+  }
+  .wrapper .wrapper_right .item.reactjs .item_info p {
+    color: #61dafb;
+  }
+  .wrapper .wrapper_right .item.vuejs .item_info p {
+    color: #41b783;
+  }
+  
+  .wrapper .wrapper_right .item p {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+
+
+  .team-members {
+    display: flex ;
+    flex-wrap: wrap;
+}
+
+
+.user {
+    width: 255px;
+}
+
+.user-cards {
+    margin: 20px 14px;
+    padding-bottom: 20px;
+}
+
+
+.user-name {
+    padding-top: 13px;
+}
+
+.user-name h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+.user-name p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #8C8C8C
+}
+

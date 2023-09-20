@@ -1,0 +1,268 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+    <link rel="stylesheet" href="{% static 'css/tab.css'%}">
+    <title>Metta</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="{% url 'index'%}">
+                <div class="logo">
+                    <img src="{{general.logo.url}}" alt="">
+                   </div>
+            </a>
+            
+
+            <div class="burger-menu menu-bar">
+                <div class="menu-main">MENU</div>
+                <div class="lines">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line1"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="burger-menu-content menu">
+
+      
+        <div class="x-btn close">
+            <div class="x-btn-style">BAGLA</div>
+            <div class="lines-close">
+                <div class="line-x line4"></div>
+                <div class="line-x line5"></div>
+                <div class="line-x line4"></div>
+            </div>
+        </div>
+
+        <div class="navbar-menu-content">
+
+            <ul>
+                <a href="{% url 'about' %}"><li>HAQQIMIZDA</li></a> 
+                <a href="{% url 'services' %}"><li>XİDMƏTLƏR</li></a>
+                <a href="{% url 'projects' %}"><li>LAYİHƏLƏR</li></a> 
+                <a href="{% url 'clients' %}"><li>MÜŞTƏRİLƏR & TƏRƏFDAŞLAR</li></a>
+                <a href="{% url 'contact'%}"><li>ƏLAQƏ</li></a>
+            </ul>
+
+            <div class="socials">
+                {% for s in social %}
+                <a href="{{s.url}}" target="_blank">
+					{% if s.icon_font_tag == 'facebook'%}
+                    <i class="fab fa-{{s.icon_font_tag}}-f"></i>
+					{% else %}
+					<i class="fab fa-{{s.icon_font_tag}}"></i>
+					{% endif %}
+                </a>
+
+                {% endfor %} 
+            </div>
+        </div>
+
+       
+    </section>
+
+    <section class="about">
+        <div class="my-container">
+            <div class="about-head">
+                <div class="title">
+                    <h1>{{about_statik.main_title}}</h1>
+                    <p>{{about_statik.main_description}} </p>
+                </div>
+
+                <div class="filter">
+                    <div class="filters">
+                        <a href="#ourcompany"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>ŞİRKƏTİMİZ</p></a>
+                        <a href="#mission"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>MİSYAMIZ, DƏYƏRLƏRİMİZ</p></a>
+                        <a href="#corporative"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>KORPORATİV MƏDƏNİYYƏT</p></a>
+                        <a href="#team"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>KOMANDAMIZ</p></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="about-img-area">
+            <img src="{{about_statik.main_image.url}}" alt="">
+        </div>
+
+        <div class="our-company" id="ourcompany">
+            <div class="my-container container-color">
+                <div class="company-title">
+                    <h1>{{general.sirketimiz_title_text}}</h1>
+                    <p>{{general.sirketimiz|safe}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-page-content">
+        <div class="about-page-all-contents">
+            <div class="mission" id="mission">
+                <div class="mission-img">
+                    <img src="{{about_statik.missiya_image.url}}" alt="">
+                </div>
+
+                <div class="mission-content">
+                    <h2>{{general.our_mission_title_text}}</h2>
+                    <p>{{general.our_mission | safe}}
+                        </p>
+
+                    <h2>{{general.deyerlerimiz_title_text}}</h2>
+                    {{general.deyerlerimiz | safe}}
+                    
+                </div>
+                
+            </div>
+
+
+            <div class="corporative" id="corporative">
+
+                <div class="corporative-content">
+                    <h2>{{general.korporativ_medeniyyet_title_text}}</h2>
+                     {{general.korporativ_medeniyyet | safe}}
+
+                </div>
+
+                <div class="corporative-img">
+                    <img src="{{about_statik.korporativ_medeniyyet_image.url}}" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="team-content">
+            <div class="wrapper">
+                <div class="wrapper_left">
+                  <ul>
+                    <li data-li="allteam" class="active">
+                      <p>Bütün heyət</p>
+                    </li>
+					{% for c in team_categories %}
+                    <li data-li="{{c.tag}}">
+                      <p>{{c.name}}</p>
+                    </li>
+                   {% endfor %}
+                     
+                  </ul>
+                </div>
+                <div class="wrapper_right">
+                  
+                  <div class="container1">
+
+                    <div class="item allteam ">
+                        <div class="team-members">
+						{% for t in team %}
+                            <div class="user-cards ">
+                                <div class="user">
+                                    <div class="user-img">
+                                        <img src="{{t.image.url}}" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h5>{{t.full_name}}</h5>
+                                        <p>{{t.position}}</p>
+                                    </div>
+                                </div>
+                            </div>
+							{% endfor %}
+      
+                             
+                        </div>
+                      
+                    </div>
+
+						
+					{% for c in team_categories %}
+                    <div class="item {{c.tag}}" style="display: none;">
+                        <div class="team-members">
+						
+							{% for t in c.team.all %}
+                            <div class="user-cards ">
+                                <div class="user">
+                                    <div class="user-img">
+                                        <img src="{{t.image.url}}" alt="">
+                                    </div>
+                                    <div class="user-name">
+                                        <h5>{{t.full_name}}</h5>
+                                        <p>{{t.position}}</p>
+                                    </div>
+                                </div>
+                            </div>
+							{% endfor %}
+      
+                             
+                        </div>
+                    </div>
+
+                    {% endfor %}
+					
+					
+					
+					
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-width">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-address">
+                        <div class="address">
+                            <p>{{general.address}}</p>
+                            <p>{{general.email}}</p>
+                        </div>
+        
+                        <div class="copyright">
+                            {{general.copyright}}
+                        </div>
+                    </div>
+        
+                    <div class="footer-socials">
+                        <div class="socials">
+                           {%for s in social%}
+                            <a href="{{s.url}}" target="_blank"><img src="{{s.icon.url}}" alt=""></a>
+                            {% endfor %}
+                        </div>
+                        <div class="powered-by">
+                           <a href="{{general.powered_by_url}}" target="_blank">
+                            <img src="{{general.powered_by_logo.url}}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/tab.js'%}"></script>
+
+    
+</body>
+</html>

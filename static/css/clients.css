@@ -1,0 +1,61 @@
+.clients-section {
+    display: flex;
+    justify-content: center;
+    background-color: #373F48;
+}
+
+.slide-width {
+    display: flex;
+    justify-content: center;
+    width: 730px;
+    height: 506px;
+    position: relative;
+    top: -144px;
+    background: #fff;
+   
+}
+
+.slide-2 {
+    width: 630px;
+}
+
+.slide-2 h1 {
+    padding: 80px 0;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #373F48;
+
+}
+
+.owl-dots {
+    display: none;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: none;
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+.owl-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.owl-nav button.owl-prev {
+    position: relative;
+    left: -130px;
+}
+
+.owl-nav button.owl-next {
+    position: relative;
+    right: -130px;
+}
+
+
+.owl-carousel .owl-stage-outer {
+    margin: auto;
+}
+

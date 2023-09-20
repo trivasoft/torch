@@ -1,0 +1,54 @@
+.slider {
+    background-color: #373F48;
+}
+
+
+
+.row-width {
+  width: 60%;
+  margin: auto;
+}
+
+
+.ig-box div img {
+    width: 100%;
+  }
+  
+  .ig-view {
+    position: relative;
+  
+  }
+  .ig-view img {
+    width: 100%;
+  }
+  .ig-view .right  {
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    right: -45px;
+    bottom: 30px;
+    color: #000;
+    font-weight: bolder;
+  }
+
+  .ig-view .left {
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    left: -45px;
+    bottom: 30px;
+    color: #000;
+    font-weight: bolder;
+  }
+
+  .white-space {
+    height: 250px;
+    background-color: #fff;
+    margin-top: -120px;
+  }
+
+
+
+.mx-1 {
+  cursor: pointer;
+}
