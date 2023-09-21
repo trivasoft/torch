@@ -263,8 +263,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
     <script src="{% static 'js/main.js'%}"></script>
-    <script src="{% static 'js/tab.js'%}"></script>
+<script>
+    var li_elements = document.querySelectorAll(".wrapper_left ul li");
+var item_elements = document.querySelectorAll(".item");
+for (var i = 0; i < li_elements.length; i++) {
+  li_elements[i].addEventListener("click", function() {
+    li_elements.forEach(function(li) {
+      li.classList.remove("active");
+    });
+    this.classList.add("active");
+    var li_value = this.getAttribute("data-li");
+    item_elements.forEach(function(item) {
+      item.style.display = "none";
+    });
+    if (li_value == "allteam") {
+      document.querySelector("." + li_value).style.display = "block";
+    }
 
+    {% for c in team_categories %}
+     if (li_value == "{{c.tag}}") {
+      document.querySelector("." + li_value).style.display = "block";
+    }
+
+  });
+}
+
+</script>
     
 </body>
 </html>
