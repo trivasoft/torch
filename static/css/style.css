@@ -3,7 +3,7 @@
 :root {
     --main-font: 'Raleway';
 
-    --main-color: #FFCE12;
+    --main-color: #EA8823;
     --bg-color: #373F48; 
 
     --text-color: #373F48; 
@@ -311,7 +311,7 @@ main {
 
 .transparancy-object img {
     position: relative;
-    left: -125px;
+    left: -31px;
 }
 
 .clients {

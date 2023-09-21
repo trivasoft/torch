@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
-    <title>Metta</title>
+    <title>Torch</title>
 </head>
 <body>
 
@@ -38,7 +38,7 @@
 
       
         <div class="x-btn close">
-            <div class="x-btn-style">BAGLA</div>
+            <div class="x-btn-style">BAĞLA</div>
             <div class="lines-close">
                 <div class="line-x line4"></div>
                 <div class="line-x line5"></div>
@@ -50,8 +50,9 @@
 
             <ul>
                 <a href="{% url 'about' %}"><li>HAQQIMIZDA</li></a> 
-                <a href="{% url 'services' %}"><li>XİDMƏTLƏR</li></a>
+                <a href="{% url 'products' %}"><li>MƏHSULLAR</li></a>
                 <a href="{% url 'projects' %}"><li>LAYİHƏLƏR</li></a> 
+                <a href="{% url 'offers' %}"><li>TƏKLİFLƏR</li></a>
                 <a href="{% url 'clients' %}"><li>MÜŞTƏRİLƏR & TƏRƏFDAŞLAR</li></a>
                 <a href="{% url 'contact'%}"><li>ƏLAQƏ</li></a>
             </ul>
@@ -116,8 +117,8 @@
                         <a href="{% url 'services' %}">
                             <div class="content-position">
                                 <div class="content-title">
-                                    <h1>{{home_statik.xidmetler_title}}</h1>
-                                    <p>{{home_statik.xidmetler_description}}</p>
+                                    <h1>{{home_statik.mehsullar_title}}</h1>
+                                    <p>{{home_statik.mehsullar_description}}</p>
                                 </div>
         
                                 <div class="foward-arrow">
@@ -129,7 +130,7 @@
                     </div>
     
                     <div class="services-img">
-                        <img src="{{home_statik.xidmetler_image.url}}" alt="">
+                        <img src="{{home_statik.mehsullar_image.url}}" alt="">
                     </div>
                 </div>
 

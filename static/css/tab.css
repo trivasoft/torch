@@ -18,7 +18,7 @@
   }
   
   .wrapper .wrapper_left ul li {
-    border: 2px solid #FFCE12;
+    border: 2px solid #EA8823;
     margin-bottom: 25px;
     padding: 12px 25px;
     display: flex;
@@ -36,7 +36,7 @@
   }
   
   .wrapper .wrapper_left ul li p {
-    color: #FFCE12;
+    color: #EA8823;
     position: relative;
   }
   
@@ -48,7 +48,7 @@
   
   .wrapper .wrapper_left ul li.active {
    
-    background-color: #FFCE12;
+    background-color: #EA8823;
   }
   .wrapper .wrapper_left ul li.active p {
     color: #373F48;

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
     <link rel="stylesheet" href="{% static 'css/slide.css'%}">
-    <title>Metta</title>
+    <title>Torch</title>
 </head>
 <body>
 
@@ -39,7 +39,7 @@
 
       
         <div class="x-btn close">
-            <div class="x-btn-style">BAGLA</div>
+            <div class="x-btn-style">BAĞLA</div>
             <div class="lines-close">
                 <div class="line-x line4"></div>
                 <div class="line-x line5"></div>
@@ -51,8 +51,9 @@
 
             <ul>
                 <a href="{% url 'about' %}"><li>HAQQIMIZDA</li></a> 
-                <a href="{% url 'services' %}"><li>XİDMƏTLƏR</li></a>
-                <a href="{% url 'projects' %}"><li>LAYİHƏLƏR</li></a> 
+                <a href="{% url 'products' %}"><li>MƏHSULLAR</li></a>
+                <a href="{% url 'projects' %}"><li>LAYİHƏLƏR</li></a>
+                <a href="{% url 'offers' %}"><li>TƏKLİFLƏR</li></a>
                 <a href="{% url 'clients' %}"><li>MÜŞTƏRİLƏR & TƏRƏFDAŞLAR</li></a>
                 <a href="{% url 'contact'%}"><li>ƏLAQƏ</li></a>
             </ul>
@@ -145,11 +146,16 @@
         </div>
     </section>
 
-
+<style>
+    hr:not([size]) {
+    height: 0.5px !important;
+    color: #9b9b9b !important;
+}
+</style>
     <section class="slider" id="gallery">
                 <div class="container-fluid">
                     <div class="row row-width">
-                      <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                      <div style=" margin-top: 8px; " class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
                         
                         <div class="ig-box d-flex flex-rows justify-content-space-between align-items-center">
 						{% for i in project.gallery.all %}
