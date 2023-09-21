@@ -2,10 +2,10 @@ from django.contrib import admin
 from .models import *
 
 
-class ProductImageInline(admin.TabularInline):
-    model = ProductImage
+class CategoryImageInline(admin.TabularInline):
+    model = CategoryImage
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    inlines = [ProductImageInline, ]
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    inlines = [CategoryImageInline, ]
     list_display = ['name',]
