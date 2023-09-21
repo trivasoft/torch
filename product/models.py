@@ -6,14 +6,27 @@ class Category(models.Model):
     name = models.CharField(max_length=256)
     excerpt = models.TextField()
     main_image = models.ImageField()
+
+    def __str__(self):
+        return self.name
+
+
+
+class Product(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="products")
+    name = models.CharField(max_length=256)
+    excerpt = models.TextField()
+    main_image = models.ImageField()
     description = models.TextField()
 
     def __str__(self):
         return self.name
 
 
-class CategoryImage(models.Model):
-    product = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="images")
+
+
+class ProductsImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
     image = models.ImageField()
 
     def __str__(self):
@@ -26,3 +39,4 @@ class CategoriesPage(models.Model):
 
     def __str__(self):
         return f'Kateqoriyalar səhifəsi'
+

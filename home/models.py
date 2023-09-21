@@ -125,6 +125,7 @@ class Service(models.Model):
 
 
 class Project(models.Model):
+    product_category = models.ForeignKey('product.Category', on_delete=models.SET_NULL, null=True, blank=True, related_name="projects")
     title = models.CharField(max_length=255)
     image = models.FileField()
     subtitle = models.CharField(max_length=255)

@@ -21,16 +21,16 @@ def categories(request):
 
 
 def products(request, id):
-    products = Category.objects.all()
-    page = CategoriesPage.objects.last()
+    category = Category.objects.get(pk=id)
+    products = Product.objects.filter(category=category)
     general = General.objects.all()[0]
     social = Social.objects.all()
 
     context = {
         'products': products,
-        'page': page,
         'general': general,
         'social': social,
+        'category': category,
     }
 
     return render(request, 'products.html', context)
