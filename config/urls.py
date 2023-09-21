@@ -16,8 +16,8 @@ urlpatterns = [
     path('clients/', home_views.clients, name="clients"),
     path('contact/', home_views.contact, name="contact"),
 
-    path('products/<int:id>/', product_views.product, name="product"),
-    path('products/', product_views.products, name="products"),
+    path('products/<int:id>/', product_views.products, name="products"),
+    path('product/<int:id>/', product_views.product, name="product"),
     path('categories/', product_views.categories, name="categories"),
 
     path('offers/<int:id>/', offer_views.offer, name="offer"),

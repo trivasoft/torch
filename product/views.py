@@ -20,7 +20,7 @@ def categories(request):
     return render(request, 'categories.html', context)
 
 
-def products(request):
+def products(request, id):
     products = Category.objects.all()
     page = CategoriesPage.objects.last()
     general = General.objects.all()[0]
