@@ -97,7 +97,7 @@
         {% for p in products %}
 
         {% if forloop.counter|divisibleby:2 %}
-        <a href="{% url 'product' p.id%}">
+
          <div class="about-project-details container" style=" padding-top: 76px; padding-bottom: 0px; ">
 
 
@@ -111,10 +111,10 @@
                   <img src="{{p.main_image.url}}" alt="">
               </div>
           </div>
-</a>
+
 
         {% else %}
-        <a href="{% url 'product' p.id%}">
+
          <div class="about-project-details container" style=" padding-top: 76px; padding-bottom: 0px; ">
               <div class="about-project-img">
                   <img src="{{p.main_image.url}}" alt="">
@@ -127,7 +127,7 @@
 
               </div>
           </div>
-</a>
+ 
         {% endif %}
 
 
