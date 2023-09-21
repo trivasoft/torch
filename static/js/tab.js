@@ -12,9 +12,9 @@ for (var i = 0; i < li_elements.length; i++) {
     });
     if (li_value == "allteam") {
       document.querySelector("." + li_value).style.display = "block";
-    } else if (li_value == "main") {
+    } else if (li_value == "esas") {
       document.querySelector("." + li_value).style.display = "block";
-    }  else if (li_value == "big") {
+    }  else if (li_value == "boyuk") {
       document.querySelector("." + li_value).style.display = "block";
     } else {
       console.log("");
