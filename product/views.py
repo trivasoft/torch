@@ -37,7 +37,7 @@ def products(request, id):
 
 
 def product(request, id):
-    product = Category.objects.get(pk=id)
+    product = Product.objects.get(pk=id)
     general = General.objects.all()[0]
     social = Social.objects.all()
     context = {

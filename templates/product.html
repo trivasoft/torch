@@ -1,4 +1,4 @@
-{% load static %}
+{% load static product_tag%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,42 +247,27 @@ td {
                <table style="margin-top:50px;width:100%;border-radius: 10px;box-shadow: 3px 4px 4px 0px #00000024;margin-bottom: 30px;">
   <tr style=" background-color: #F5F5F5; ">
     <th>MODEL</th>
-    <th>MAX TRAVEL</th>
-    <th>MAX LOAD</th>
-    <th>MAX SPEED</th>
+      {% attributes product as atts %}
+      {%for a in atts %}
+    <th>{{a.name}}</th>
+      {% endfor%}
     <th>MORE INFORMATION</th>
   </tr>
+
+                   {% for m in product.models.all %}
   <tr style="    border-bottom: 1px solid gainsboro;">
-    <td>Model 1</td>
-    <td>590'</td>
-    <td>5,000 lb AIA</td>
-    <td>1000 FPM</td>
-    <td><a style=" color: black; " href="https://elvinseyidov.com/media/Mask_Group_16_ugsyEJu.png" target="_blank"> Specs (PDF)</a></td>
-  </tr>
-  <tr style="    border-bottom: 1px solid gainsboro;">
-    <td>Model 2</td>
-    <td>350'</td>
-    <td>5,000 lb AIA</td>
-    <td>700 FPM</td>
-   <td><a style=" color: black; " href="https://elvinseyidov.com/media/Mask_Group_16_ugsyEJu.png" target="_blank"> Specs (PDF)</a></td>
+    <td>{{m.name}}  </td>
+       {% attribute_values product m as attsv %}
+      {%for v in attsv %}
+      <td>{{v.value}}</td>
+      {% endfor %}
 
+    <td>{% if m.file %}
+        <a style=" color: black; " href="{{m.file.url}}" target="_blank"> Specs (PDF)</a>
+    {% endif%}</td>
   </tr>
-                   <tr style="    border-bottom: 1px solid gainsboro;">
-    <td>Model 3</td>
-    <td>300'</td>
-    <td>5,000 lb AIA</td>
-    <td>500 FPM</td>
-   <td><a style=" color: black; " href="https://elvinseyidov.com/media/Mask_Group_16_ugsyEJu.png" target="_blank"> Specs (PDF)</a></td>
+                   {% endfor %}
 
-  </tr>
-                   <tr>
-    <td>Model 4</td>
-    <td>150'</td>
-    <td>5,000 lb AIA</td>
-    <td>350 FPM</td>
-    <td><a style=" color: black; " href="https://elvinseyidov.com/media/Mask_Group_16_ugsyEJu.png" target="_blank"> Specs (PDF)</a></td>
-
-  </tr>
 </table>
                 </div>
                 </div>

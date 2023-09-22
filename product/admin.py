@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import *
 
+admin.site.register(Model)
+admin.site.register(Attribute)
+admin.site.register(AttributeValue)
 
 class ProductImageInline(admin.TabularInline):
     model = ProductsImage
