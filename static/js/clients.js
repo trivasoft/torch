@@ -12,7 +12,7 @@ $('.owl-carousel').owlCarousel({
             items:3
         },
         1000:{
-            items:5
+            items:3
         }
     },
     navText: ["<img src='/static/svg/arrow-left.svg'>", "<img src='/static/svg/right-arrow.svg'>"],
