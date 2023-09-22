@@ -126,7 +126,7 @@ class Service(models.Model):
 class OfisUnvanlar(models.Model):
     link = models.CharField(max_length=256)
     address = models.CharField(max_length=256)
-    sort = models.ImageField(default=0)
+    sort = models.IntegerField(default=0)
     class Meta:
         ordering = ('sort',)
     def __str__(self):
