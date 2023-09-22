@@ -13,6 +13,7 @@ admin.site.register(Team)
 admin.site.register(Client)
 admin.site.register(Partner)
 admin.site.register(Service)
+admin.site.register(OfisUnvanlar)
 
 
 class GalleryInline(admin.TabularInline):

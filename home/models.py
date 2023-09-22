@@ -123,6 +123,14 @@ class Service(models.Model):
     def __str__(self):
         return self.title
 
+class OfisUnvanlar(models.Model):
+    link = models.CharField(max_length=256)
+    address = models.CharField(max_length=256)
+    sort = models.ImageField(default=0)
+    class Meta:
+        ordering = ('sort',)
+    def __str__(self):
+        return self.address
 
 class Project(models.Model):
     product_category = models.ForeignKey('product.Category', on_delete=models.SET_NULL, null=True, blank=True, related_name="projects")

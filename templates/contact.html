@@ -92,20 +92,24 @@
            </div>
             <div class="container">
                 <div class="contact-details">
-                    <div class="map">{{general.map_embed |safe}}
+                    <div class="map">
+                        <div style=" margin-bottom: 6px; " class="address-c">Baş ofis ünvanı</div>{{general.map_embed |safe}}
 
 
-    
-                        <div class="address-n-btn">
+                        {% for a in addresses %}
+                        <div class="address-n-btn" style=" margin-top: -14px; ">
                             <div class="address-c">
-                                {{general.address}} <br>Bakı, Azərbaycan<br> {{general.phone}}
+                                {{a.address}}
                             </div>
                             <div class="contact-btn">
-                                <a href="{{general.map_url}}" target="_blank">
-                                    <div class="direction">{{contact_statik.map_button_text}}</div>
+                                <a href="{{a.link}}" target="_blank">
+                                    <div class="direction">İSTİQAMƏT</div>
                                 </a>
                             </div>
                         </div>
+                        {% endfor %}
+
+
                     </div>
     
                     <div class="form">
@@ -146,8 +150,8 @@
                 <div class="footer-content">
                     <div class="footer-address">
                         <div class="address">
-                            <p>{{general.address}}</p>
-                            <p>{{general.email}}</p>
+                            <p><a href="{% url 'about'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Haqqımızda </a> |  <a href="{% url 'categories'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Məhsullar  </a>|  <a href="{% url 'projects'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Layihələr  </a>|  <a href="{% url 'offers'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Təkliflər  </a>| <a href="{% url 'clients'%}" style=" color: black; margin-right: 5px; margin-left: 6px; "> Müştərilər & Tərəfdaşlar </a> | <a href="{% url 'contact'%}" style=" color: black; margin-right: 5px; margin-left: 6px; "> Əlaqə</a></p>
+
                         </div>
         
                         <div class="copyright">

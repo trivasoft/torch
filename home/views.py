@@ -101,6 +101,7 @@ def clients(request):
 def contact(request):
     general = General.objects.all()[0]
     social = Social.objects.all()
+    addresses = OfisUnvanlar.objects.all()
     contact_statik = Contact.objects.all()[0]
     form = ContactForm()
     if request.method == "POST":
@@ -116,6 +117,7 @@ def contact(request):
 
     context = {
         'general': general,
+        'addresses': addresses,
         'social': social,
         'contact_statik': contact_statik,
     }
