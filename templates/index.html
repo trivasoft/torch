@@ -117,8 +117,8 @@
                     <div class="content-text">
                         <a href="{% url 'categories' %}">
                             <div class="content-position">
-                                <div class="content-title">
-                                    <h1>{{home_statik.mehsullar_title}}</h1>
+                                <div class="content-title" style=" width: 323px; ">
+                                    <h1>{{home_statik.mehsullar_title | safe}}</h1>
                                     <p>{{home_statik.mehsullar_description}}</p>
                                 </div>
         
@@ -139,7 +139,7 @@
                     <div class="content-text">
                         <a href="{% url 'projects' %}">
                             <div class="content-position">
-                                <div class="content-title">
+                                <div class="content-title" style=" width: 323px; ">
                                     <h1>{{home_statik.layiheler_title}}</h1>
                                     <p>{{home_statik.layiheler_description}}</p>
                                 </div>
@@ -161,7 +161,7 @@
                     <div class="content-text">
                         <a href="{% url 'clients' %}">
                             <div class="content-position">
-                                <div class="content-title">
+                                <div class="content-title" style=" width: 323px; ">
                                     <h1>{{home_statik.musteriler_title}}</h1>
                                     <p>{{home_statik.musteriler_description}}</p>
                                 </div>
