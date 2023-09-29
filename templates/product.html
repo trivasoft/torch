@@ -252,7 +252,7 @@ td {
       {%for a in atts %}
     <th>{{a.name}}</th>
       {% endfor%}
-    <th>MORE INFORMATION</th>
+    <th>DAHA ƏTRAFLI</th>
   </tr>
 
                    {% for m in product.models.all %}
@@ -264,7 +264,7 @@ td {
       {% endfor %}
 
     <td>{% if m.file %}
-        <a style=" color: black; " href="{{m.file.url}}" target="_blank"> Specs (PDF)</a>
+        <a style=" color: black; " href="{{m.file.url}}" target="_blank"> Xüsusiyyətləri (PDF)</a>
     {% endif%}</td>
   </tr>
                    {% endfor %}
