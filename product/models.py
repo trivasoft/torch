@@ -16,6 +16,11 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="products")
     dark_section_title = models.CharField(max_length=256)
     dark_section_text = models.TextField()
+
+    sub_models_title = models.CharField(max_length=256)
+    sub_models_text = models.TextField()
+
+
     name = models.CharField(max_length=256)
     excerpt = models.TextField()
     main_image = models.ImageField()
