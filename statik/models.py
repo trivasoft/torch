@@ -4,6 +4,7 @@ class Home(models.Model):
     cover_title = models.CharField(max_length=255)
     cover_description = models.CharField(max_length=255)
     cover_image = models.ImageField()
+    main_video_back = models.FileField(null=True, blank=True)
     niye_biz_title = models.CharField(max_length=255)
     niye_biz_description = models.CharField(max_length=255)
     mehsullar_title = models.CharField(max_length=255)
