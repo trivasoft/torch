@@ -16,7 +16,8 @@
 <body>
 
     <header  class="bg-color">
-          <form action="{% url 'set_language' %}" style=" height: unset; float: right; right: 165px; position: absolute; z-index: 1000000; top: 43px; " method="post">  {#2#}
+        <div class="lang">
+            <form action="{% url 'set_language' %}" style=" height: unset; float: right; right: 165px; position: absolute; z-index: 1000000; top: 43px; " method="post">  {#2#}
 
                         {% csrf_token %}  {#3#}
                         <select name="language" class="lng" id="lang">  {#4#}
@@ -31,17 +32,53 @@
                                 </option>
                             {% endfor %}
                         </select>
+                <button type="submit">ok</button>
                     </form>
 
 
 
-                        {% comment %} <select name="language" id="lang">
-                            <option value="img">a<img src="{% static 'svg/az.svg' %}" alt=""> </option>
-                            <option value="img">u<img src="{% static 'svg/usa.svg' %}" alt=""> </option>
-                            <option value="img">r<img src="{% static 'svg/russian.svg' %}" alt=""> </option>
-                        </select> {% endcomment %}
+
+
 
                     </form>
+        </div>
+
+         <script>
+
+
+
+
+        $(document).ready(function () {
+            c = $("input[name='csrfmiddlewaretoken']").val();
+
+            $(".lng").on("change", function () {
+                lng = $(this).val();
+                $.ajax({
+                    url: "{% url 'set_language' %}",
+                    method: 'POST',
+                    data: {language: lng, csrfmiddlewaretoken: c},
+                    success: function () {
+                        location.reload();
+                    },
+                    error: function (e) {
+                        $("body").html(e.responseText);
+                    }
+                })
+            });
+
+          });
+
+
+
+
+
+
+
+
+
+
+
+	</script>
         <nav>
             <a href="{% url 'index'%}">
                 <div class="logo">
