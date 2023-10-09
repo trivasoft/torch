@@ -125,9 +125,39 @@
 
 
 
-                        <button type="submit">ok</button>
 
                     </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+           <script>
+
+
+
+        $(document).ready(function () {
+            c = $("input[name='csrfmiddlewaretoken']").val();
+
+            $(".lng").on("change", function () {
+                lng = $(this).val();
+                $.ajax({
+                    url: "{% url 'set_language' %}",
+                    method: 'POST',
+                    data: {language: lng, csrfmiddlewaretoken: c},
+                    success: function () {
+                        location.reload();
+                    },
+                    error: function (e) {
+                        $("body").html(e.responseText);
+                    }
+                })
+            });
+
+          });
+
+
+
+
+
+	</script>
         <nav>
             <a href="{% url 'index'%}">
                 <div class="logo">
