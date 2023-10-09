@@ -250,6 +250,11 @@ msgstr "КЛИЕНТ"
 msgid "Biz Kimik"
 msgstr "Кто мы"
 
+Направление
+msgid "İSTİQAMƏT"
+msgstr "НАПРАВЛЕНИЕ"
+
+
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
