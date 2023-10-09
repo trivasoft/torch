@@ -250,7 +250,7 @@ msgstr "КЛИЕНТ"
 msgid "Biz Kimik"
 msgstr "Кто мы"
 
-Направление
+
 msgid "İSTİQAMƏT"
 msgstr "НАПРАВЛЕНИЕ"
 
