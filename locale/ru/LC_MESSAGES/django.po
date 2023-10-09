@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 22:39+0400\n"
+"POT-Creation-Date: 2023-10-10 00:13+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,233 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\templates\about.html:29 .\templates\categories.html:29
+#: .\templates\clients.html:35 .\templates\contact.html:37
+#: .\templates\index.html:118 .\templates\offers.html:29
+#: .\templates\product.html:109 .\templates\products.html:29
+#: .\templates\project.html:29 .\templates\projects.html:29
+#: .\templates\services.html:28 .\templates\success.html:28
+msgid "MENU"
+msgstr "МЕНЮ"
+
+#: .\templates\about.html:43 .\templates\categories.html:43
+#: .\templates\clients.html:49 .\templates\contact.html:51
+#: .\templates\index.html:132 .\templates\offers.html:43
+#: .\templates\product.html:123 .\templates\products.html:43
+#: .\templates\project.html:43 .\templates\projects.html:43
+#: .\templates\services.html:42 .\templates\success.html:42
+msgid "BAĞLA"
+msgstr "ЗАКРЫВАТЬ"
+
+#: .\templates\about.html:54 .\templates\categories.html:54
+#: .\templates\clients.html:60 .\templates\contact.html:62
+#: .\templates\index.html:143 .\templates\offers.html:54
+#: .\templates\product.html:134 .\templates\products.html:54
+#: .\templates\project.html:54 .\templates\projects.html:54
+#: .\templates\services.html:53 .\templates\success.html:53
+msgid "HAQQIMIZDA"
+msgstr "О НАС"
+
+#: .\templates\about.html:55 .\templates\categories.html:55
+#: .\templates\clients.html:61 .\templates\contact.html:63
+#: .\templates\index.html:144 .\templates\offers.html:55
+#: .\templates\product.html:135 .\templates\products.html:55
+#: .\templates\project.html:55 .\templates\projects.html:55
+#: .\templates\services.html:54 .\templates\success.html:54
+msgid "MƏHSULLAR"
+msgstr "ПРОДУКТЫ"
+
+#: .\templates\about.html:56 .\templates\categories.html:56
+#: .\templates\clients.html:62 .\templates\contact.html:64
+#: .\templates\index.html:145 .\templates\offers.html:56
+#: .\templates\product.html:136 .\templates\products.html:56
+#: .\templates\products.html:120 .\templates\project.html:56
+#: .\templates\projects.html:56 .\templates\services.html:55
+#: .\templates\success.html:55
+msgid "LAYİHƏLƏR"
+msgstr "ПРОЕКТЫ"
+
+#: .\templates\about.html:57 .\templates\categories.html:57
+#: .\templates\clients.html:63 .\templates\contact.html:65
+#: .\templates\index.html:146 .\templates\offers.html:57
+#: .\templates\product.html:137 .\templates\products.html:57
+#: .\templates\project.html:57 .\templates\projects.html:57
+#: .\templates\services.html:56 .\templates\success.html:56
+msgid "TƏKLİFLƏR"
+msgstr "ПРЕДЛОЖЕНИЯ"
+
+#: .\templates\about.html:58 .\templates\categories.html:58
+#: .\templates\clients.html:64 .\templates\contact.html:66
+#: .\templates\index.html:147 .\templates\offers.html:58
+#: .\templates\product.html:138 .\templates\products.html:58
+#: .\templates\project.html:58 .\templates\projects.html:58
+#: .\templates\services.html:57 .\templates\success.html:57
+msgid "MÜŞTƏRİLƏR & TƏRƏFDAŞLAR"
+msgstr "КЛИЕНТЫ И ПАРТНЕРЫ"
+
+#: .\templates\about.html:59 .\templates\categories.html:59
+#: .\templates\clients.html:65 .\templates\contact.html:67
+#: .\templates\index.html:148 .\templates\offers.html:59
+#: .\templates\product.html:139 .\templates\products.html:59
+#: .\templates\project.html:59 .\templates\projects.html:59
+#: .\templates\services.html:58 .\templates\success.html:58
+msgid "ƏLAQƏ"
+msgstr "КОНТАКТ"
+
+#: .\templates\about.html:89
+msgid "ŞİRKƏTİMİZ"
+msgstr "НАША КОМПАНИЯ"
+
+#: .\templates\about.html:90
+msgid "MİSYAMIZ, DƏYƏRLƏRİMİZ"
+msgstr "МИССИИ, ЦЕННОСТИ"
+
+#: .\templates\about.html:91
+msgid "KORPORATİV MƏDƏNİYYƏT"
+msgstr "КОРПОРАТИВНАЯ КУЛЬТУРА"
+
+#: .\templates\about.html:92
+msgid "KOMANDAMIZ"
+msgstr "НАША КОМАНДА"
+
+#: .\templates\about.html:235 .\templates\categories.html:156
+#: .\templates\clients.html:165 .\templates\contact.html:153
+#: .\templates\index.html:289 .\templates\offers.html:156
+#: .\templates\product.html:305 .\templates\products.html:157
+#: .\templates\project.html:194 .\templates\projects.html:129
+#: .\templates\services.html:142 .\templates\success.html:97
+msgid "Haqqımızda"
+msgstr "О нас"
+
+#: .\templates\about.html:235 .\templates\categories.html:156
+#: .\templates\clients.html:165 .\templates\contact.html:153
+#: .\templates\index.html:289 .\templates\offers.html:156
+#: .\templates\product.html:305 .\templates\products.html:157
+#: .\templates\project.html:194 .\templates\projects.html:129
+#: .\templates\services.html:142 .\templates\success.html:97
+msgid "Məhsullar"
+msgstr "Продукты"
+
+#: .\templates\about.html:235 .\templates\categories.html:156
+#: .\templates\clients.html:165 .\templates\contact.html:153
+#: .\templates\index.html:289 .\templates\offers.html:156
+#: .\templates\product.html:305 .\templates\products.html:157
+#: .\templates\project.html:194 .\templates\projects.html:129
+#: .\templates\services.html:142 .\templates\success.html:97
+msgid "Layihələr"
+msgstr "Проекты"
+
+#: .\templates\about.html:235 .\templates\categories.html:156
+#: .\templates\clients.html:165 .\templates\contact.html:153
+#: .\templates\index.html:289 .\templates\offers.html:156
+#: .\templates\product.html:305 .\templates\products.html:157
+#: .\templates\project.html:194 .\templates\projects.html:129
+#: .\templates\services.html:142 .\templates\success.html:97
+msgid "Təkliflər"
+msgstr "Предложения"
+
+#: .\templates\about.html:235 .\templates\categories.html:156
+#: .\templates\clients.html:165 .\templates\contact.html:153
+#: .\templates\index.html:289 .\templates\offers.html:156
+#: .\templates\product.html:305 .\templates\products.html:157
+#: .\templates\project.html:194 .\templates\projects.html:129
+#: .\templates\services.html:142 .\templates\success.html:97
+msgid "Müştərilər & Tərəfdaşlar"
+msgstr "Клиенты и партнеры"
+
+#: .\templates\about.html:235 .\templates\categories.html:156
+#: .\templates\clients.html:165 .\templates\contact.html:153
+#: .\templates\index.html:289 .\templates\offers.html:156
+#: .\templates\product.html:305 .\templates\products.html:157
+#: .\templates\project.html:194 .\templates\projects.html:129
+#: .\templates\services.html:142 .\templates\success.html:97
+msgid "Əlaqə"
+msgstr "Контакт"
+
+#: .\templates\clients.html:95
+msgid "BİZİ SEÇƏNLƏR"
+msgstr "КТО ВЫБИРАЕТ НАС"
+
+#: .\templates\clients.html:96
+msgid "TƏRƏFDAŞLAR"
+msgstr "ПАРТНЕРЫ"
+
+#: .\templates\contact.html:96
+msgid "Baş ofis ünvanı"
+msgstr "Адрес головного офиса"
+
+#: .\templates\contact.html:118
+msgid "Adınız"
+msgstr "Имя"
+
+#: .\templates\contact.html:122
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\templates\contact.html:126
+msgid "Telefon nömrə"
+msgstr "Номер телефона"
+
+#: .\templates\contact.html:130
+msgid "İsmarıc"
+msgstr "Сообщение"
+
+#: .\templates\contact.html:135
+msgid "GÖNDƏR"
+msgstr "ОТПРАВЛЯТЬ"
+
+#: .\templates\product.html:255
+msgid "DAHA ƏTRAFLI"
+msgstr "БОЛЕЕ"
+
+#: .\templates\product.html:267
+msgid "Xüsusiyyətləri"
+msgstr "Функции"
+
+#: .\templates\product.html:291
+msgid "Məhsullarımızla maraqlanırsınız?"
+msgstr "Заинтересованы в нашей продукции?"
+
+#: .\templates\product.html:292
+msgid "ƏLAQƏ SAXLAYIN"
+msgstr "СВЯЗАТЬСЯ С НАМИ"
+
+#: .\templates\products.html:134 .\templates\projects.html:103
+msgid "Ətraflı"
+msgstr "БОЛЕЕ"
+
+#: .\templates\project.html:89 .\templates\project.html:108
+msgid "LAYİHƏ HAQQINDA"
+msgstr "О ПРОЕКТЕ"
+
+#: .\templates\project.html:90
+msgid "QALEREYA"
+msgstr "ГАЛЕРЕЯ"
+
+#: .\templates\project.html:113
+msgid "VƏZİYYƏT"
+msgstr "ПОЛОЖЕНИЕ ДЕЛ"
+
+#: .\templates\project.html:119
+msgid "TİP"
+msgstr "ТИП"
+
+#: .\templates\project.html:125
+msgid "SAHƏ"
+msgstr "ОБЛАСТЬ"
+
+#: .\templates\project.html:130
+msgid "MÜDDƏT"
+msgstr "ПЕРИОД"
+
+#: .\templates\project.html:135
+msgid "YER"
+msgstr "РАСПОЛОЖЕНИЕ"
+
+#: .\templates\project.html:140
+msgid "MÜŞTƏRİ"
+msgstr "КЛИЕНТ"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"

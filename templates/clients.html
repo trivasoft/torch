@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,7 @@
             
 
             <div class="burger-menu menu-bar">
-                <div class="menu-main">MENU</div>
+                <div class="menu-main">{% trans 'MENU'%}</div>
                 <div class="lines">
                     <div class="line line1"></div>
                     <div class="line line2"></div>
@@ -46,7 +46,7 @@
 
       
         <div class="x-btn close">
-            <div class="x-btn-style">BAĞLA</div>
+            <div class="menu-main">{% trans 'BAĞLA'%}</div>
             <div class="lines-close">
                 <div class="line-x line4"></div>
                 <div class="line-x line5"></div>
@@ -57,12 +57,12 @@
         <div class="navbar-menu-content">
 
             <ul>
-               <a href="{% url 'about' %}"><li>HAQQIMIZDA</li></a>
-                <a href="{% url 'categories' %}"><li>MƏHSULLAR</li></a>
-                <a href="{% url 'projects' %}"><li>LAYİHƏLƏR</li></a>
-                <a href="{% url 'offers' %}"><li>TƏKLİFLƏR</li></a>
-                <a href="{% url 'clients' %}"><li>MÜŞTƏRİLƏR & TƏRƏFDAŞLAR</li></a>
-                <a href="{% url 'contact'%}"><li>ƏLAQƏ</li></a>
+               <a href="{% url 'about' %}"><li>{% trans 'HAQQIMIZDA'%}</li></a>
+                <a href="{% url 'categories' %}"><li>{% trans 'MƏHSULLAR'%}</li></a>
+                <a href="{% url 'projects' %}"><li>{% trans 'LAYİHƏLƏR'%}</li></a>
+                <a href="{% url 'offers' %}"><li>{% trans 'TƏKLİFLƏR'%}</li></a>
+                <a href="{% url 'clients' %}"><li>{% trans 'MÜŞTƏRİLƏR & TƏRƏFDAŞLAR'%}</li></a>
+                <a href="{% url 'contact'%}"><li>{% trans 'ƏLAQƏ'%}</li></a>
             </ul>
 
             <div class="socials">
@@ -92,8 +92,8 @@
 
                 <div class="filter">
                     <div class="filters">
-                        <a href="#choose"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>BİZİ SEÇƏNLƏR</p></a>
-                        <a href="#choose2"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>TƏRƏFDAŞLAR</p></a>
+                        <a href="#choose"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>{% trans 'BİZİ SEÇƏNLƏR'%}</p></a>
+                        <a href="#choose2"> <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span> <p>{% trans 'TƏRƏFDAŞLAR'%}</p></a>
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                     <div class="footer-address">
 
 <div class="address">
-                         <p><a href="{% url 'about'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Haqqımızda </a> |  <a href="{% url 'categories'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Məhsullar  </a>|  <a href="{% url 'projects'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Layihələr  </a>|  <a href="{% url 'offers'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">Təkliflər  </a>| <a href="{% url 'clients'%}" style=" color: black; margin-right: 5px; margin-left: 6px; "> Müştərilər & Tərəfdaşlar </a> | <a href="{% url 'contact'%}" style=" color: black; margin-right: 5px; margin-left: 6px; "> Əlaqə</a></p>
+                         <p><a href="{% url 'about'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">{% trans 'Haqqımızda'%} </a> |  <a href="{% url 'categories'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">{% trans 'Məhsullar'%}  </a>|  <a href="{% url 'projects'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">{% trans 'Layihələr'%}  </a>|  <a href="{% url 'offers'%}" style=" color: black; margin-right: 5px; margin-left: 6px; ">{% trans 'Təkliflər'%}  </a>| <a href="{% url 'clients'%}" style=" color: black; margin-right: 5px; margin-left: 6px; "> {% trans 'Müştərilər & Tərəfdaşlar'%} </a> | <a href="{% url 'contact'%}" style=" color: black; margin-right: 5px; margin-left: 6px; "> {% trans 'Əlaqə'%}</a></p>
                         </div>
         
                         <div class="copyright">

@@ -16,7 +16,7 @@ class HomeTranslationOptions(TranslationOptions):
         'musteriler_description',
               )
 
-   
+
 translator.register(Home, HomeTranslationOptions)
 
 
