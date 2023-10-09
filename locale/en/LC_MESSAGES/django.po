@@ -95,6 +95,13 @@ msgstr "CONTACT"
 msgid "ŞİRKƏTİMİZ"
 msgstr "OUR COMPANY"
 
+
+msgid "Tərəfdaşlar"
+msgstr "Partners"
+
+msgid "Müştərilərimiz"
+msgstr "Customers"
+
 #: .\templates\about.html:90
 msgid "MİSYAMIZ, DƏYƏRLƏRİMİZ"
 msgstr "MISSIONS, VALUES"

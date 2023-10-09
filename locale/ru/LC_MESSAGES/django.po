@@ -254,6 +254,13 @@ msgid "Bütün heyət"
 msgstr "Весь персонал"
 
 
+msgid "Tərəfdaşlar"
+msgstr "Партнеры"
+
+msgid "Müştərilərimiz"
+msgstr "Наши клиенты"
+
+
 msgid "İSTİQAMƏT"
 msgstr "НАПРАВЛЕНИЕ"
 
