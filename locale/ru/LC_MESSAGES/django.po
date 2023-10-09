@@ -250,6 +250,9 @@ msgstr "КЛИЕНТ"
 msgid "Biz Kimik"
 msgstr "Кто мы"
 
+msgid "Bütün heyət"
+msgstr "Весь персонал"
+
 
 msgid "İSTİQAMƏT"
 msgstr "НАПРАВЛЕНИЕ"
