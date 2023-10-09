@@ -16,3 +16,9 @@ class TeamTranslationOptions(TranslationOptions):
     fields = ('position',)
 
 translator.register(Team, TeamTranslationOptions)
+
+class ProjectTranslationOptions(TranslationOptions):
+    fields = ('title','subtitle','description','veziyyeti','tip','sahe','muddet','yer','musteri')
+  
+
+translator.register(Project, ProjectTranslationOptions)
