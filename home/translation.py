@@ -19,6 +19,11 @@ translator.register(Team, TeamTranslationOptions)
 
 class ProjectTranslationOptions(TranslationOptions):
     fields = ('title','subtitle','description','veziyyeti','tip','sahe','muddet','yer','musteri')
-  
 
 translator.register(Project, ProjectTranslationOptions)
+
+
+class OfisUnvanlarTranslationOptions(TranslationOptions):
+    fields = ('address',)
+
+translator.register(OfisUnvanlar, OfisUnvanlarTranslationOptions)
