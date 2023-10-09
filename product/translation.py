@@ -16,3 +16,22 @@ class AttributeValueTranslationOptions(TranslationOptions):
     )
 
 translator.register(AttributeValue, AttributeValueTranslationOptions)
+
+
+class CategoriesPageTranslationOptions(TranslationOptions):
+    fields = (
+        'page_header',
+        'page_header_text',
+    )
+
+translator.register(CategoriesPage, CategoriesPageTranslationOptions)
+
+
+
+class CategoryTranslationOptions(TranslationOptions):
+    fields = (
+        'name',
+        'excerpt',
+    )
+
+translator.register(Category, CategoryTranslationOptions)
