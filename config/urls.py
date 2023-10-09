@@ -5,9 +5,11 @@ from django.conf import settings
 from home import views as home_views
 from product import views as product_views
 from offer import views as offer_views
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', home_views.index, name="index"),
     path('about/', home_views.about, name="about"),
     path('services/', home_views.services, name="services"),
