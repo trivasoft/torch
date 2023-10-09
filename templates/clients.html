@@ -23,6 +23,32 @@
 <body>
 
     <header>
+          <form action="{% url 'set_language' %}" style=" height: unset; float: right; right: 165px; position: absolute; z-index: 1000000; top: 43px; " method="post">  {#2#}
+
+                        {% csrf_token %}  {#3#}
+                        <select name="language" class="lng" id="lang">  {#4#}
+                            {% get_current_language as LANGUAGE_CODE %}  {#5#}
+                            {% get_available_languages as LANGUAGES %}  {#6#}
+                            {% get_language_info_list_ex request as cccc %}  {#6#}
+                            {% get_language_info_list for LANGUAGES as languages %}  {#7#}
+                            {% for language in cccc %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                    <span class="flag">{{ language.flag }}</span>  {#8#}
+                                     {{ language.code }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </form>
+
+
+
+                        {% comment %} <select name="language" id="lang">
+                            <option value="img">a<img src="{% static 'svg/az.svg' %}" alt=""> </option>
+                            <option value="img">u<img src="{% static 'svg/usa.svg' %}" alt=""> </option>
+                            <option value="img">r<img src="{% static 'svg/russian.svg' %}" alt=""> </option>
+                        </select> {% endcomment %}
+
+                    </form>
         <nav>
             <a href="{% url 'index'%}">
                 <div class="logo">
