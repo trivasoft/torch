@@ -35,3 +35,25 @@ class CategoryTranslationOptions(TranslationOptions):
     )
 
 translator.register(Category, CategoryTranslationOptions)
+
+
+class ModelTranslationOptions(TranslationOptions):
+    fields = (
+        'name',
+    )
+
+translator.register(Model, ModelTranslationOptions)
+
+class ProductTranslationOptions(TranslationOptions):
+    fields = (
+        'dark_section_title',
+        'dark_section_text',
+        'sub_models_title',
+        'sub_models_text',
+        'name',
+        'excerpt',
+        'description',
+    )
+
+ 
+translator.register(Product, ProductTranslationOptions)
