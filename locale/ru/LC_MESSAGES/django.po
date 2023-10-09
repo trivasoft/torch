@@ -247,6 +247,10 @@ msgstr "РАСПОЛОЖЕНИЕ"
 msgid "MÜŞTƏRİ"
 msgstr "КЛИЕНТ"
 
+msgid "Biz Kimik"
+msgstr "Кто мы"
+
+
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
 msgstr ""

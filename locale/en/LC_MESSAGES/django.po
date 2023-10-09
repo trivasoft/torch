@@ -245,6 +245,10 @@ msgstr "LOCATION"
 msgid "MÜŞTƏRİ"
 msgstr "CLIENT"
 
+
+msgid "Biz Kimik"
+msgstr "Who We Are"
+
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
 msgstr ""
