@@ -27,3 +27,8 @@ class OfisUnvanlarTranslationOptions(TranslationOptions):
     fields = ('address',)
 
 translator.register(OfisUnvanlar, OfisUnvanlarTranslationOptions)
+
+class ServiceTranslationOptions(TranslationOptions):
+    fields = ('title','description')
+
+translator.register(Service, ServiceTranslationOptions)
