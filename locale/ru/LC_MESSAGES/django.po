@@ -249,7 +249,8 @@ msgstr "КЛИЕНТ"
 
 msgid "Biz Kimik"
 msgstr "Кто мы"
-
+msgid "MODEL"
+msgstr "МОДЕЛЬ"
 msgid "Bütün heyət"
 msgstr "Весь персонал"
 

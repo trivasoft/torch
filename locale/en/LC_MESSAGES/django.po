@@ -232,6 +232,10 @@ msgstr "GALLERY"
 msgid "VƏZİYYƏT"
 msgstr "STATUS"
 
+msgid "MODEL"
+msgstr "MODEL"
+
+
 #: .\templates\project.html:119
 msgid "TİP"
 msgstr "TYPE"
