@@ -10,6 +10,18 @@ def index(request):
     social = Social.objects.all()
     home_statik = Home.objects.all()[0]
 
+    from django.conf import settings
+    from django.http import HttpResponse
+    from django.utils import translation
+
+
+    print(request.get_host())
+    if request.get_host() == 'torcheu.com':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+
     context = {
         'general': general,
         'social': social,
