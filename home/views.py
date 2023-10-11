@@ -16,6 +16,9 @@ def index(request):
 
 
     print(request.get_host())
+    print("====+======")
+    print(request.COOKIES.get('is_visited'))
+
     if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
         user_language = "en"
         translation.activate(user_language)
@@ -28,7 +31,11 @@ def index(request):
         'social': social,
         'home_statik': home_statik,
     }
-    return render(request, 'index.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'index.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
 
 def about(request):
     general = General.objects.all()[0]
