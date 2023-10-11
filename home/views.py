@@ -16,7 +16,7 @@ def index(request):
 
 
     print(request.get_host())
-    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') == 'yes':
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
         user_language = "en"
         translation.activate(user_language)
         response = HttpResponse(...)
