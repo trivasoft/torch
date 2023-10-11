@@ -4,15 +4,15 @@ from .forms import ContactForm
 from .models import *
 from statik.models import *
 
+from django.conf import settings
+from django.http import HttpResponse
+from django.utils import translation
 
 def index(request):
     general = General.objects.all()[0]
     social = Social.objects.all()
     home_statik = Home.objects.all()[0]
 
-    from django.conf import settings
-    from django.http import HttpResponse
-    from django.utils import translation
 
 
     print(request.get_host())
@@ -43,6 +43,12 @@ def about(request):
     about_statik = About.objects.all()[0]
     team = Team.objects.all()
     team_categories = TeamCategory.objects.all()
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
 
     context = {
         'general': general,
@@ -51,13 +57,23 @@ def about(request):
         'team': team,
         'team_categories': team_categories,
     }
-    return render(request, 'about.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'about.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
 
 def services(request):
     general = General.objects.all()[0]
     social = Social.objects.all()
     service_statik = ServiceStatik.objects.all()[0]
     services = Service.objects.all()
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
 
     context = {
         'general': general,
@@ -65,13 +81,23 @@ def services(request):
         'service_statik': service_statik,
         'services': services,
     }
-    return render(request, 'services.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'services.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
 
 def projects(request):
     general = General.objects.all()[0]
     social = Social.objects.all()
     projects_statik = ProjectStatik.objects.all()[0]
     projects = Project.objects.all()
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
 
     context = {
         'general': general,
@@ -79,19 +105,33 @@ def projects(request):
         'projects_statik': projects_statik,
         'projects': projects,
     }
-    return render(request, 'projects.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'projects.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
 
 def project(request, id):
     general = General.objects.all()[0]
     social = Social.objects.all()
     project = Project.objects.get(pk=id)
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
     context = {
         'general': general,
         'social': social,
         'project': project,
 
     }
-    return render(request, 'project.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'project.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
 
 def clients(request):
     general = General.objects.all()[0]
@@ -109,6 +149,12 @@ def clients(request):
             in_arr = []
         n = n+1
     partners = Partner.objects.all()
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
     context = {
         'general': general,
         'social': social,
@@ -116,7 +162,11 @@ def clients(request):
         'clients': arr,
         'partners': partners,
     }
-    return render(request, 'clients.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'clients.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
 
 def contact(request):
     general = General.objects.all()[0]
@@ -134,11 +184,20 @@ def contact(request):
                 'contact_statik': contact_statik,
             }
             return render(request, "success.html", context)
-
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
     context = {
         'general': general,
         'addresses': addresses,
         'social': social,
         'contact_statik': contact_statik,
     }
-    return render(request, 'contact.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'contact.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response

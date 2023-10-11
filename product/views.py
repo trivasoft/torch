@@ -3,13 +3,20 @@ from django.shortcuts import render
 from home.models import General, Social
 from .models import *
 
-
+from django.conf import settings
+from django.http import HttpResponse
+from django.utils import translation
 def categories(request):
     categories = Category.objects.all()
     page = CategoriesPage.objects.last()
     general = General.objects.all()[0]
     social = Social.objects.all()
-
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
     context = {
         'categories': categories,
         'page': page,
@@ -25,7 +32,12 @@ def products(request, id):
     products = Product.objects.filter(category=category)
     general = General.objects.all()[0]
     social = Social.objects.all()
-
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
     context = {
         'products': products,
         'general': general,
@@ -33,17 +45,31 @@ def products(request, id):
         'category': category,
     }
 
-    return render(request, 'products.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'products.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
 
 
 def product(request, id):
     product = Product.objects.get(pk=id)
     general = General.objects.all()[0]
     social = Social.objects.all()
+    if request.get_host() == 'torcheu.com' and request.COOKIES.get('is_visited') != 'yes':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
     context = {
         'product': product,
         'general': general,
         'social': social,
     }
 
-    return render(request, 'product.html', context)
+    days_expire = 7
+    max_age = days_expire * 24 * 60 * 60
+    response = render(request, 'product.html', context)
+    response.set_cookie('is_visited', 'yes', max_age=max_age)
+    return response
