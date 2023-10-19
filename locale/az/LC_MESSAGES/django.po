@@ -27,6 +27,10 @@ msgstr ""
 msgid "MENU"
 msgstr ""
 
+
+msgid "Biz Kimik?"
+msgstr "Biz Kimik?"
+
 #: .\templates\about.html:43 .\templates\categories.html:43
 #: .\templates\clients.html:49 .\templates\contact.html:51
 #: .\templates\index.html:132 .\templates\offers.html:43
