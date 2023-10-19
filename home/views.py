@@ -75,6 +75,32 @@ def about(request):
         response = HttpResponse(...)
         response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
         response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'en':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'ru':
+        user_language = "ru"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'az':
+        user_language = "az"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    else:
+        if request.get_host() == 'torcheu.com':
+            user_language = "en"
+            print("engliiiiiiish")
+            translation.activate(user_language)
+            response = HttpResponse(...)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+            response.set_cookie('is_visited', 'yes')
 
     context = {
         'general': general,
@@ -100,6 +126,32 @@ def services(request):
         response = HttpResponse(...)
         response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
         response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'en':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'ru':
+        user_language = "ru"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'az':
+        user_language = "az"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    else:
+        if request.get_host() == 'torcheu.com':
+            user_language = "en"
+            print("engliiiiiiish")
+            translation.activate(user_language)
+            response = HttpResponse(...)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+            response.set_cookie('is_visited', 'yes')
 
     context = {
         'general': general,
@@ -124,6 +176,32 @@ def projects(request):
         response = HttpResponse(...)
         response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
         response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'en':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'ru':
+        user_language = "ru"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'az':
+        user_language = "az"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    else:
+        if request.get_host() == 'torcheu.com':
+            user_language = "en"
+            print("engliiiiiiish")
+            translation.activate(user_language)
+            response = HttpResponse(...)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+            response.set_cookie('is_visited', 'yes')
 
     context = {
         'general': general,
@@ -147,6 +225,32 @@ def project(request, id):
         response = HttpResponse(...)
         response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
         response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'en':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'ru':
+        user_language = "ru"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'az':
+        user_language = "az"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    else:
+        if request.get_host() == 'torcheu.com':
+            user_language = "en"
+            print("engliiiiiiish")
+            translation.activate(user_language)
+            response = HttpResponse(...)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+            response.set_cookie('is_visited', 'yes')
     context = {
         'general': general,
         'social': social,
@@ -181,6 +285,32 @@ def clients(request):
         response = HttpResponse(...)
         response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
         response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'en':
+        user_language = "en"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'ru':
+        user_language = "ru"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    elif request.COOKIES.get('django_language') == 'az':
+        user_language = "az"
+        translation.activate(user_language)
+        response = HttpResponse(...)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+        response.set_cookie('is_visited', 'yes')
+    else:
+        if request.get_host() == 'torcheu.com':
+            user_language = "en"
+            print("engliiiiiiish")
+            translation.activate(user_language)
+            response = HttpResponse(...)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+            response.set_cookie('is_visited', 'yes')
     context = {
         'general': general,
         'social': social,
@@ -235,12 +365,13 @@ def contact(request):
         response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
         response.set_cookie('is_visited', 'yes')
     else:
-        user_language = "en"
-        print("engliiiiiiish")
-        translation.activate(user_language)
-        response = HttpResponse(...)
-        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
-        response.set_cookie('is_visited', 'yes')
+        if request.get_host() == 'torcheu.com':
+            user_language = "en"
+            print("engliiiiiiish")
+            translation.activate(user_language)
+            response = HttpResponse(...)
+            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, user_language)
+            response.set_cookie('is_visited', 'yes')
 
     context = {
         'general': general,
