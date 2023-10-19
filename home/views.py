@@ -12,6 +12,9 @@ def index(request):
     general = General.objects.all()[0]
     social = Social.objects.all()
     home_statik = Home.objects.all()[0]
+    is_visited = False
+    if request.COOKIES.get('is_visited') == 'yes':
+        is_visited = True
 
 
 
@@ -56,6 +59,7 @@ def index(request):
         'general': general,
         'social': social,
         'home_statik': home_statik,
+        'is_visited': is_visited,
     }
     days_expire = 7
     max_age = days_expire * 24 * 60 * 60
