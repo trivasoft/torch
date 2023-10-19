@@ -12,13 +12,75 @@
     <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
     <link rel="icon" type="image/x-icon" href="{{general.favicon.url}}">
     <title>Torch</title>
+     <style>
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 300000000; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgb(0 0 0 / 76%);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+ @media screen and (max-width: 450px){
+
+
+    .langgg{
+right: 213px !important;
+    position: absolute;
+    z-index: 1000000;
+    top: 50px !important;
+    }
+    .langggg{
+    right: 124px !important;
+    position: absolute;
+    z-index: 1000000;
+    top: 0px !important;
+    }
+}
+ @media screen and (max-width: 450px){
+.modal-content {
+    width: 80% !important;
+}
+}
+</style>
 </head>
 <body>
 
     <header>
-          <form action="{% url 'set_language' %}" style=" height: unset; float: right; right: 165px; position: absolute; z-index: 1000000; top: 43px; " method="post">  {#2#}
-
-                        {% csrf_token %}  {#3#}
+            <img class="langgg" src="{% static 'world.png'%}" style="width: 20px;cursor:pointer;height: unset;float: right;right: 240px;position: absolute;z-index: 1000000;top: 45px;" id="myBtn">
+        <form class="langggg" action="{% url 'set_language' %}" style=" height: unset; float: right; right: 165px; position: absolute; z-index: 1000000; top: 43px; " method="post">  {#2#}
+ {% csrf_token %}  {#3#}
                         <select name="language" class="lng" id="lang">  {#4#}
                             {% get_current_language as LANGUAGE_CODE %}  {#5#}
                             {% get_available_languages as LANGUAGES %}  {#6#}
@@ -32,7 +94,6 @@
                             {% endfor %}
                         </select>
                     </form>
-
 
 
 
@@ -126,6 +187,24 @@
 
        
     </section>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div style=" font-size: 12px; margin-bottom: 15px; text-align: center;">Davam etmək istədiyiniz ölkəni seçin.</div>
+      <div style="text-align: center;">
+
+          <a href="https://torcheu.com/"><img src="{% static 'po.png'%}" style=" width: 45px;margin-right: 9px;    border-radius: 5px; "></a>
+          <a href="https://torch.az/"><img src="{% static 'az.png'%}" style=" width: 45px;margin-right: 9px;    border-radius: 5px; "></a>
+          <a href="https://torcheu.com/"><img src="{% static 'uz.png'%}" style=" width: 45px;margin-right: 9px;    border-radius: 5px; "></a>
+          <a href="https://jvgroup.tj/"><img src="{% static 'tj.png'%}" style=" width: 45px;margin-right: 9px;    border-radius: 5px; "></a>
+      </div>
+  </div>
+
+</div>
 
     <section class="about">
         <div class="my-container">
@@ -225,7 +304,33 @@
     <script src="{% static 'js/main.js'%}"></script>
 
 
+ <script>
+// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
     
 </body>
 </html>
