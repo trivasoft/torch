@@ -214,7 +214,7 @@ margin-right:15px !important;
     <header>
 
         <img class="langgg" src="{% static 'world.png'%}" style="width: 20px;cursor:pointer;height: unset;float: right;right: 240px;position: absolute;z-index: 1000000;top: 45px;" id="myBtn">
-        <form class="langggg" action="{% url 'set_language' %}" style=" height: unset; float: right; right: 165px; position: absolute; z-index: 1000000; top: 43px; " method="post">  {#2#}
+        <form class="langggg" action="{% url 'set_language' %}" style=" height: unset; float: right; right: 165px; position: absolute; z-index: 200; top: 43px; " method="post">  {#2#}
 
                         {% csrf_token %}  {#3#}
                         <select name="language" class="lng" id="lang">  {#4#}
@@ -388,8 +388,35 @@ window.onclick = function(event) {
 }
 </script>
 
+    <style>
+    .menu-bar {
+    cursor: pointer;
+    z-index: 200 !important;
+}
+         @media screen and (max-width: 600px){
+#VisaChipCardVideo {
+    width: 100% !important;
+}
+#light {
+    display: none;
+    position: absolute;
+    top: 60% !important;
+        transform: translate(-50%, -50%);
+            margin-left: 0 !important;
+            max-width: 100% !important;
 
-    <main>
+   }
+ .desktopp{
+    display: none !important;
+ }
+
+ .mobilee{
+    display: block !important;
+ }
+}
+    </style>
+
+    <main class="desktopp">
         <div class="container">
             <div class="main-content">
                 <div class="main-text-area">
@@ -414,6 +441,40 @@ window.onclick = function(event) {
             
         </div>
     </main>
+
+
+
+
+    <main class="mobilee" style="display: none;height: unset; margin-bottom: 37px;">
+        <div class="container">
+            <div class="main-content"  style=" display: block; ">
+                <div class="main-text-area" style=" width: 100%; position: unset;height: unset; margin-bottom: 42px; ">
+                    <h1>{{home_statik.cover_title}}</h1>
+                    <p>{{home_statik.cover_description}}</p>
+                    <a href="{% url 'about' %}">
+                        <div class="who-we-are">
+                            {% trans 'Biz Kimik?'%} <span><img src="{% static 'svg/arrow.svg'%}" alt=""></span>
+                        </div>
+                    </a>
+                 </div>
+
+                 <div class="img-area"  style=" position: unset; ">
+                 <div   style=" position: relative; ">
+                     <video class="black-bg"  autoplay muted style=" object-fit: cover;width: 100%; ">
+                          <source src="{{home_statik.main_video_back.url}}" type="video/mp4">
+                          <!--Browser does not support <video> tag -->
+                     </video>
+                     <img src="/static/play.svg" style="    cursor: pointer;position: absolute;left: 50%; top: 50%; width: 80px; transform: translate(-50%, -50%);" alt="" onclick="lightbox_open();">
+
+                 </div>
+                 </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
 
     <section class="why-us">
         <div class="transparancy-object">
@@ -536,12 +597,14 @@ window.onclick = function(event) {
         
     </footer>
 
+ <div>
  <div id="light">
         <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
       <video id="VisaChipCardVideo"  style="width:900px;" controls>
           <source src="{{home_statik.main_video_back.url}}" type="video/mp4">
           <!--Browser does not support <video> tag -->
         </video>
+    </div>
     </div>
 
 
