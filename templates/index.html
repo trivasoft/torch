@@ -183,20 +183,7 @@ right: 213px !important;
   width: 40%;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
  @media screen and (max-width: 450px){
 .modal-content {
@@ -307,7 +294,12 @@ color:#fff !important;
 
       
         <div class="x-btn close">
-            <div class="menu-main">{% trans 'BAĞLA'%}</div>
+
+                            {% get_current_language as LANGUAGE_CODE %}
+
+
+
+            <div class="menu-main" style="{% if LANGUAGE_CODE == 'ru'%}font-size: 11px !important;{% endif%}">{% trans 'BAĞLA'%}</div>
             <div class="lines-close">
                 <div class="line-x line4"></div>
                 <div class="line-x line5"></div>
