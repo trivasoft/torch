@@ -202,6 +202,12 @@ margin-right:15px !important;
 .menu-main {
 font-size: 16px;
 }
+.menu-main {
+    flex: 0 0 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
 .menu-main:hover{
 color:#fff !important;
 }</style>
@@ -299,7 +305,7 @@ color:#fff !important;
 
 
 
-            <div class="menu-main" style="{% if LANGUAGE_CODE == 'ru'%}font-size: 11px !important;{% endif%}">{% trans 'BAĞLA'%}</div>
+            <div class="menu-main" style="">{% trans 'BAĞLA'%}</div>
             <div class="lines-close">
                 <div class="line-x line4"></div>
                 <div class="line-x line5"></div>

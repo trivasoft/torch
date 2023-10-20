@@ -36,7 +36,7 @@ msgstr "МЕНЮ"
 #: .\templates\project.html:43 .\templates\projects.html:43
 #: .\templates\services.html:42 .\templates\success.html:42
 msgid "BAĞLA"
-msgstr "ЗАКРЫВАТЬ"
+msgstr "ЗАКРЫ.."
 
 #: .\templates\about.html:54 .\templates\categories.html:54
 #: .\templates\clients.html:60 .\templates\contact.html:62
