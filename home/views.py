@@ -8,6 +8,10 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.utils import translation
 
+
+
+
+
 def index(request):
     general = General.objects.all()[0]
     social = Social.objects.all()
