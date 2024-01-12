@@ -64,6 +64,11 @@ right: 213px !important;
 width:45px !important;
 margin-right:15px !important;
 }
+
+.ccccccc{
+    position: unset;
+    text-align: center;
+}
 }
 </style>
 <style>
@@ -248,10 +253,10 @@ color:#fff !important;
 
 
   
-
+{% if category.projects.count > 0%}
  <section class="projects" style="    background: #ffffff;">
         <div class="project-content">
-            <div class="title project-title" style="     margin-top: 50px;box-sizing: border-box; position: relative; left: 161px; display: flex; flex-wrap: wrap; ">
+            <div class="ccccccc title project-title" style="     margin-top: 50px;box-sizing: border-box; position: relative; left: 161px; display: flex; flex-wrap: wrap; ">
                     <h1 style="font-weight: bold; font-size: 55px; line-height: 65px; color: #373F48;">{% trans 'LAYİHƏLƏR'%}</h1>
                 </div>
             <div class="project-cards" style="    padding: 61px 0;">
@@ -278,7 +283,7 @@ color:#fff !important;
         </div>
     </section>
 
-
+{% endif %}
 
 
 
@@ -304,7 +309,7 @@ color:#fff !important;
                             {% endfor %}
                         </div>
                         <div class="powered-by">
-                            <a href="{{general.powered_by_url}}" target="_blank">
+                            <a href="{{general.powered_by_url}}">
                             <img src="{{general.powered_by_logo.url}}" alt=""></a>
                         </div>
                     </div>

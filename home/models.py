@@ -75,7 +75,7 @@ class TeamCategory(models.Model):
 
 class Team(models.Model):
     full_name = models.CharField(max_length=255)
-    image = models.ImageField()
+    image = models.ImageField(null=True, blank=True)
     position = models.CharField(max_length=255)
     category = models.ForeignKey(TeamCategory, on_delete=models.CASCADE, related_name="team")
 
