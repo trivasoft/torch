@@ -260,9 +260,6 @@ msgstr "CLIENT"
 msgid "Biz Kimik?"
 msgstr "Who We Are?"
 
-msgid "Biz Kimik"
-msgstr "Who We Are"
-
 msgid "İSTİQAMƏT"
 msgstr "DIRECTION"
 
