@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'torch',
         'USER': 'maxcreative',
-        'PASSWORD': 'Max14748294!Max',
+        'PASSWORD': 'Max14748294!',
         'HOST': 'localhost',
         'PORT': '',
     }
